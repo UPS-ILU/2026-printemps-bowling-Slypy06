@@ -35,6 +35,16 @@ class GameTest {
 		assertEquals(30, g.score());
 	}
 	
+	@Test
+	void test5() {
+		Game g = new Game();
+		g.roll(7);
+		g.roll(3);
+		g.roll(4);
+		rolls(g, 17, 0);
+		assertEquals(18, g.score());
+	}
+	
 	private void rolls(Game g, int nb, int value) {
 		
 		for(int i = 0; i < nb; i++) {
