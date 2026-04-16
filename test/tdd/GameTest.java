@@ -20,6 +20,13 @@ class GameTest {
 		assertEquals(0, g.score());
 	}
 	
+	@Test
+	void test3() {
+		Game g = new Game();
+		rolls(g, 20, 1);
+		assertEquals(20, g.score());
+	}
+	
 	private void rolls(Game g, int nb, int value) {
 		
 		for(int i = 0; i < nb; i++) {

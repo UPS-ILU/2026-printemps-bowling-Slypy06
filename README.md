@@ -16,7 +16,7 @@
 backlog :
 - [x] Le score est de 0 à la création du jeu 
 - [x] Le score est de 0 après 20 roll à 0 
-- [ ] Le score est de 20 après 20 roll à 1 
+- [x] Le score est de 20 après 20 roll à 1 
 - [ ] Le score est de 30 après 10 roll à 1 et 10 roll à 2 
 - [ ] Le score est de 0 après 20 roll à 0 
 - [ ] Le score est de 18 après les rolls 7, 3, 4 et 17 fois 0 
