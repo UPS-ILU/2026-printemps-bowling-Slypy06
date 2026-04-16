@@ -4,19 +4,19 @@ public class Game {
 
 	private int score = 0;
 	private boolean firstThrow = true;
-	private boolean spare = false;
+	private int bonusrounds = 0;
 	private int left = 10;
 	
 	public void roll(int value) {
 		
-		if(spare) {
+		if(bonusrounds > 0) {
 			score += value;
-			spare = false;
+			bonusrounds--;
 		}
 		
-		if(!firstThrow && value >= left) {
+		if(value >= left) {
 			
-			spare = true;
+			bonusrounds = firstThrow ? 2 : 1;
 			
 		}
 		
