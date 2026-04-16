@@ -6,6 +6,7 @@ public class Game {
 	private boolean firstThrow = true;
 	private int bonusrounds = 0;
 	private int left = 10;
+	private int round = 1;
 	
 	public void roll(int value) {
 		
@@ -14,19 +15,24 @@ public class Game {
 			bonusrounds--;
 		}
 		
-		if(value >= left) {
+		if(round <= 10 && value >= left) {
 			
 			bonusrounds = firstThrow ? 2 : 1;
+			firstThrow = false;
 			
 		}
 		
-		score += value;
+		if(round<=10)
+			score += value;
+		
 		left -= value;
 		
 		firstThrow = !firstThrow;
 		
-		if(firstThrow)
+		if(firstThrow) {
+			round++;
 			left = 10;
+		}
 		
 	}
 	
