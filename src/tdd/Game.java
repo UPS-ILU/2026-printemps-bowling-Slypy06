@@ -5,6 +5,7 @@ public class Game {
 	private int score = 0;
 	private boolean firstThrow = true;
 	private int bonusrounds = 0;
+	private int doublebonusrounds = 0;
 	private int left = 10;
 	private int round = 1;
 	
@@ -15,7 +16,18 @@ public class Game {
 			bonusrounds--;
 		}
 		
+		if(doublebonusrounds > 0) {
+			score += value;
+			doublebonusrounds--;
+		}
+		
 		if(round <= 10 && value >= left) {
+			
+			if(bonusrounds > 0) {
+				
+				doublebonusrounds = bonusrounds;
+				
+			}
 			
 			bonusrounds = firstThrow ? 2 : 1;
 			firstThrow = false;

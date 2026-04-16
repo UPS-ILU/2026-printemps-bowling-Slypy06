@@ -106,11 +106,22 @@ class GameTest {
 		assertEquals(131, g.score());
 	}
 	
+	@Test
+	void test9() {
+		
+		Game g = new Game();
+		rolls(g, 12, 10);
+		System.out.println(g.score());
+		assertEquals(300, g.score());
+		
+	}
+	
 	private void rolls(Game g, int nb, int value) {
 		
 		for(int i = 0; i < nb; i++) {
 			
 			g.roll(value);
+			System.out.println(g.score());
 			
 		}
 		
